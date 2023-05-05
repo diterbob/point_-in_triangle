@@ -2,6 +2,7 @@
 #define RENDERAREA_H
 
 #include <QWidget>
+#include<QPainter>
 
 class RenderArea : public QWidget
 {

@@ -1,7 +1,7 @@
 #include "renderarea.h"
 #include "qevent.h"
 
-#include<QPainter>
+
 
 
 RenderArea::RenderArea(QWidget *parent)

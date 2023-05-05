@@ -58,6 +58,11 @@ float Triangle::findk(QPoint point1,QPoint point2)
     return float(point1.y()-point2.y())/float(point1.x() - point2.x());
 }
 
+void Triangle::statusBarUpdate(QString str)
+{
+    emit statusBarMessige(str);
+}
+
 //__________________________
 //slots
 //__________________________
@@ -88,19 +93,8 @@ void Triangle::addPoint(QPoint point)
     QPoint crossPoint ((b[1]-b[0])/(k[0]-k[1]),k[0]*(b[1]-b[0])/(k[0]-k[1])+b[0]);
     //QTextStream out(asd);
     if(distace(crossPoint,farPoint) > distace(*pointPos,farPoint) && ((triagleK[0]) < atan(k[0])) && (atan(k[0])< (triagleK[1])))
-        qDebug()<< "into" << "";
+        statusBarUpdate("into");
     else
-        qDebug()<< "out" << "";
-
-    /*out<< "k;" << k[0] << ";"<< k[1]<< "\n";
-    out<< "b;" << b[0] << ";"<< b[1]<< "\n";
-
-    for (QPoint var: vec) {
-        out<< "x;" << var.x()<< "\n";
-        out<< "y;" << var.y()<< "\n";
-    }
-    out<< "max I;" << maxDisI<< "\n";
-    out<< "Point x; " << pointPos->x() << ";y;" << pointPos->y()<< "\n";
-    out<< "_________________________"<< "\n";//*/
+        statusBarUpdate("out");
 
 }

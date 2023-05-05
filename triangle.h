@@ -15,6 +15,7 @@ signals:
     void vecOverflow();
     void drawLinePos(QPoint,QPoint);
     void poinInBorder(bool);
+    void statusBarMessige(QString);
 
 public slots:
     void addVertex(QPoint point);
@@ -33,6 +34,7 @@ private:
     float findk(QPoint point1,QPoint point2);
     float distace(QPoint point1,QPoint point2);
     int farPointI();
+    void statusBarUpdate(QString str);
     float disToPoint [3],k[2],b[2];
 
 
