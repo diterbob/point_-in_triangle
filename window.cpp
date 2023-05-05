@@ -39,7 +39,7 @@ window::window()
     connect(triangle,SIGNAL(vecOverflow()),this,SLOT(triangleDis()));
     connect(triangle,SIGNAL(vecOverflow()),renderarea,SLOT(fullVertex()));
     connect(renderarea,SIGNAL(changeStatus(QString)),statusbar,SLOT(showMessage(QString)));
-    connect(triangle,SIGNAL(statusBarUpdate(QString)),statusbar,SLOT(showMessage(QString)));
+    connect(triangle,SIGNAL(statusBarMessige(QString)),statusbar,SLOT(showMessage(QString)));
     connect(triangle,SIGNAL(drawLinePos(QPoint,QPoint)),renderarea,SLOT(drowLineWithPoint(QPoint,QPoint)));
 
 }

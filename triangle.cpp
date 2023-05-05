@@ -1,7 +1,4 @@
 #include "triangle.h"
-#include "qdebug.h"
-#include <iostream>
-#include <QFile>
 
 Triangle::Triangle(QObject *parent)
     : QObject{parent}
@@ -91,7 +88,6 @@ void Triangle::addPoint(QPoint point)
     vec.insert(maxDisI,farPoint);
 
     QPoint crossPoint ((b[1]-b[0])/(k[0]-k[1]),k[0]*(b[1]-b[0])/(k[0]-k[1])+b[0]);
-    //QTextStream out(asd);
     if(distace(crossPoint,farPoint) > distace(*pointPos,farPoint) && ((triagleK[0]) < atan(k[0])) && (atan(k[0])< (triagleK[1])))
         statusBarUpdate("into");
     else
