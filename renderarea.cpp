@@ -30,7 +30,6 @@ QSize RenderArea::sizeHint() const
     return QSize(400, 200);
 }
 
-// nede finde good solution
 void RenderArea::mousePressEvent(QMouseEvent *event)
 {
     if (event->button() == Qt::LeftButton && (trianglepresset || !paintVertex))
